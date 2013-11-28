@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/AccessPointInnerTemplate.Master"
+    AutoEventWireup="true" CodeBehind="TwoColumn.master.cs" Inherits="NopSolutions.NopCommerce.Web.MasterPages.TwoColumn" %>
+
+<%@ Register TagPrefix="nopCommerce" TagName="MiniShoppingCartBox" Src="~/Modules/MiniShoppingCartBox.ascx" %>
+<%@ Register TagPrefix="nopCommerce" TagName="CategoryNavigation" Src="~/Modules/CategoryNavigation.ascx" %>
+<%@ Register TagPrefix="nopCommerce" TagName="ManufacturerNavigation" Src="~/Modules/ManufacturerNavigation.ascx" %>
+<%@ Register TagPrefix="nopCommerce" TagName="InfoBlock" Src="~/Modules/InfoBlock.ascx" %>
+<%@ Register TagPrefix="nopCommerce" TagName="LiveChatBlock" Src="~/Modules/LiveChatBlock.ascx" %>
+<%@ Register TagPrefix="nopCommerce" TagName="RecentlyViewedProducts" Src="~/Modules/RecentlyViewedProductsBox.ascx" %>
+<%@ Register TagPrefix="nopCommerce" TagName="PopularTags" Src="~/Modules/PopularTags.ascx" %>
+<%@ Register TagPrefix="nopCommerce" TagName="NewsLetterSubscriptionBoxControl" Src="~/Modules/NewsLetterSubscriptionBoxControl.ascx" %>
+<%@ Register Src="~/Modules/RecentlyAddedLeftNav.ascx" TagName="RecentlyAddedLeftNav"
+    TagPrefix="uc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cph1" runat="server">
+    <!--Header Part End-->
+    <div id="container">
+        <!--Left Part-->
+        <div id="column-left">
+            <!--Bestsellers Part Start-->
+            <div class="box">
+                <div class="box-heading">
+                    Bestsellers</div>
+                <div class="box-content">
+                    <div class="box-product">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <div class="slide-inner">
+                                        <div class="image">
+                                            <a href="product.html">
+                                                <img src="../image/product/sony_vaio_1-45x45.jpg" alt="Friendly Jewelry" /></a></div>
+                                        <div class="name">
+                                            <a href="product.html">Friendly Jewelry</a></div>
+                                        <div class="price">
+                                            $1,177.00</div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slide-inner">
+                                        <div class="image">
+                                            <a href="product.html">
+                                                <img src="../image/product/apple_cinema_30-45x45.jpg" alt="Apple Cinema 30&quot;" /></a></div>
+                                        <div class="name">
+                                            <a href="product.html">Apple Cinema 30&quot;</a></div>
+                                        <div class="price">
+                                            <span class="price-old">$119.50</span> <span class="price-new">$107.75</span></div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slide-inner">
+                                        <div class="image">
+                                            <a href="product.html">
+                                                <img src="../image/product/ipod_classic_1-45x45.jpg" alt="iPad Classic" /></a></div>
+                                        <div class="name">
+                                            <a href="product.html">iPad Classic</a></div>
+                                        <div class="price">
+                                            $119.50</div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slide-inner">
+                                        <div class="image">
+                                            <a href="product.html">
+                                                <img src="../image/product/lotto-sports-shoes-white-45x45.jpg" alt="Lotto Sports Shoes" /></a></div>
+                                        <div class="name">
+                                            <a href="product.html">Lotto Sports Shoes</a></div>
+                                        <div class="price">
+                                            $589.50</div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slide-inner">
+                                        <div class="image">
+                                            <a href="product.html">
+                                                <img src="../image/product/Jeep-Casual-Shoes-45x45.jpg" alt="Jeep-Casual-Shoes" /></a></div>
+                                        <div class="name">
+                                            <a href="product.html">Jeep-Casual-Shoes</a></div>
+                                        <div class="price">
+                                            $131.25</div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Bestsellers Part End-->
+            <!--Latest Product Start-->
+            <uc1:RecentlyAddedLeftNav ID="RecentlyAddedLeftNav1" runat="server" />
+            <!--Latest Product End-->
+            <!--Banner Start-->
+            <div class="banner">
+                <div>
+                    <a href="#">
+                        <img src="../image/product/small-banner1-220x350.jpg" alt="banner" title="banner" /></a></div>
+            </div>
+            <!--Banner End-->
+        </div>
+        <!--Left End-->
+        <!--Middle Part Start-->
+        <asp:ContentPlaceHolder ID="cph1" runat="server">
+        </asp:ContentPlaceHolder>
+        <!--Middle Part End-->
+        <div class="clear">
+        </div>
+    </div>
+</asp:Content>
