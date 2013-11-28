@@ -48,4 +48,4 @@ Disallow: /twocheckoutinshandler.aspx
 Disallow: /twocheckoutreturn.aspx
 Disallow: /usaepayepaymentformreturn.aspx
 Disallow: /wishlist.aspx
-Disallow: /Worldpayreturn.aspx
+Disallow: /Worldpayreturn.aspx 
