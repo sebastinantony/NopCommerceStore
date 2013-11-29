@@ -46,15 +46,7 @@ namespace NopSolutions.NopCommerce.Web.Modules
 
             protected override void Render(System.Web.UI.HtmlTextWriter writer)
             {
-                writer.WriteBeginTag("li");
-                writer.WriteAttribute("class", this.CssClass);
-                if (!String.IsNullOrEmpty(this.LiLeftMargin))
-                {
-                    writer.WriteAttribute("style", string.Format("margin-left: {0}px", this.LiLeftMargin));
-                }
-                writer.Write(HtmlTextWriter.TagRightChar);
                 this.HyperLink.RenderControl(writer);
-                writer.WriteEndTag("li");
             }
 
             public string LinkText
@@ -156,35 +148,48 @@ namespace NopSolutions.NopCommerce.Web.Modules
             foreach (var category in this.CategoryService.GetAllCategoriesByParentCategoryId(rootCategoryId))
             {
                 var link = new NopCommerceLi();
-                phCategories.Controls.Add(link);
 
                 string categoryURL = SEOHelper.GetCategoryUrl(category);
-                if (currentCategory != null && currentCategory.CategoryId == category.CategoryId)
-                    link.CssClass = "active";
-                else
-                    link.CssClass = "inactive";
                 link.HyperLink.NavigateUrl = categoryURL;
                 string catName = string.Empty;
-                if (this.SettingManager.GetSettingValueBoolean("Display.Products.ShowCategoryProductNumber"))
-                {
-                    //display category name with assigned products number
-                    int numberOfProducts = GetNumberOfProducts(category, this.SettingManager.GetSettingValueBoolean("Display.Products.ShowCategoryProductNumber.IncludeSubCategories"));
-                    catName = string.Format("{0} ({1})", category.LocalizedName, numberOfProducts);
-                }
-                else
-                {
-                    //display only category name
-                    catName = category.LocalizedName;
-                    catName += "(" + GetNumberOfProducts(category, false) + ")";
-                }
+                catName = category.LocalizedName;
+                catName += "(" + GetNumberOfProducts(category, false) + ")";
                 link.HyperLink.Text = Server.HtmlEncode(catName);
-                if (padding > 0)
-                    link.LiLeftMargin = padding.ToString();
 
-                //for (int i = 0; i <= breadCrumb.Count - 1; i++)
-                //    if (breadCrumb[i].CategoryId == category.CategoryId)
-                        CreateChildMenu(breadCrumb, category.CategoryId, currentCategory, level);
+                phCategories.Controls.Add(new LiteralControl("<div class='column'>"));
+
+                phCategories.Controls.Add(link);
+                CreateSubChildMenu(breadCrumb, category.CategoryId, currentCategory, level);
+
+                phCategories.Controls.Add(new LiteralControl("</div>"));
             }
+        }
+
+        private void CreateSubChildMenu(List<Category> breadCrumb, int rootCategoryId, Category currentCategory, int level)
+        {
+            int padding = level++ * 15;
+            phCategories.Controls.Add(new LiteralControl("<div>"));
+            phCategories.Controls.Add(new LiteralControl("<ul>"));
+            foreach (var category in this.CategoryService.GetAllCategoriesByParentCategoryId(rootCategoryId))
+            {
+                var link = new NopCommerceLi();
+
+                string categoryURL = SEOHelper.GetCategoryUrl(category);
+                link.HyperLink.NavigateUrl = categoryURL;
+                string catName = string.Empty;
+                catName = category.LocalizedName;
+                catName += "(" + GetNumberOfProducts(category, false) + ")";
+                link.HyperLink.Text = Server.HtmlEncode(catName);
+
+                phCategories.Controls.Add(new LiteralControl("<li>"));
+                phCategories.Controls.Add(link);
+                phCategories.Controls.Add(new LiteralControl("</li>"));
+                
+
+                
+            }
+            phCategories.Controls.Add(new LiteralControl("</ul>"));
+            phCategories.Controls.Add(new LiteralControl("</div>"));
         }
         
         #endregion
