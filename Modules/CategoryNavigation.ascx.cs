@@ -153,7 +153,9 @@ namespace NopSolutions.NopCommerce.Web.Modules
                 link.HyperLink.NavigateUrl = categoryURL;
                 string catName = string.Empty;
                 catName = category.LocalizedName;
-                catName += "(" + GetNumberOfProducts(category, false) + ")";
+                int countProduct = GetNumberOfProducts(category, false);
+                if(countProduct != 0)
+                    catName += "(" + GetNumberOfProducts(category, false) + ")";
                 link.HyperLink.Text = Server.HtmlEncode(catName);
 
                 phCategories.Controls.Add(new LiteralControl("<div class='column'>"));
