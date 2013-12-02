@@ -4024,12 +4024,26 @@
     <Compile Include="MasterPages\AccessPointRoot.Master.designer.cs">
       <DependentUpon>AccessPointRoot.Master</DependentUpon>
     </Compile>
+    <Compile Include="Modules\LatestProducts.ascx.cs">
+      <DependentUpon>LatestProducts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\LatestProducts.ascx.designer.cs">
+      <DependentUpon>LatestProducts.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\ProductBox_Latest.ascx.cs">
       <DependentUpon>ProductBox_Latest.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Modules\ProductBox_Latest.ascx.designer.cs">
       <DependentUpon>ProductBox_Latest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ProductBox_Latest_Home.ascx.cs">
+      <DependentUpon>ProductBox_Latest_Home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ProductBox_Latest_Home.ascx.designer.cs">
+      <DependentUpon>ProductBox_Latest_Home.ascx</DependentUpon>
     </Compile>
     <Compile Include="Modules\RecentlyAddedLeftNav.ascx.cs">
       <DependentUpon>RecentlyAddedLeftNav.ascx</DependentUpon>
@@ -6373,7 +6387,9 @@
     <Content Include="js\jquery.jcarousel.min.js" />
     <Content Include="js\jquery.nivo.slider.pack.js" />
     <Content Include="js\tabs.js" />
+    <Content Include="Modules\LatestProducts.ascx" />
     <Content Include="Modules\ProductBox_Latest.ascx" />
+    <Content Include="Modules\ProductBox_Latest_Home.ascx" />
     <Content Include="Modules\RecentlyAddedLeftNav.ascx" />
     <Content Include="Modules\TopMenu.ascx" />
     <Content Include="WishlistEmailAFriend.aspx" />
