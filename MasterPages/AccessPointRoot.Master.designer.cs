@@ -58,22 +58,13 @@ namespace NopSolutions.NopCommerce.Web.MasterPages {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ctrlCategoryNavigation control.
+        /// AccessPointHeader1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::NopSolutions.NopCommerce.Web.Modules.CategoryNavigation ctrlCategoryNavigation;
-        
-        /// <summary>
-        /// CategoryNavigation1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::NopSolutions.NopCommerce.Web.Modules.CategoryNavigation CategoryNavigation1;
+        protected global::NopSolutions.NopCommerce.Web.Modules.AccessPointHeader AccessPointHeader1;
         
         /// <summary>
         /// HomePageProducts1 control.
@@ -101,6 +92,15 @@ namespace NopSolutions.NopCommerce.Web.MasterPages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::NopSolutions.NopCommerce.Web.Modules.ManufacturerNavigation ManufacturerNavigation1;
+        
+        /// <summary>
+        /// AccessPointFooter1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::NopSolutions.NopCommerce.Web.Modules.AccessPointFooter AccessPointFooter1;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

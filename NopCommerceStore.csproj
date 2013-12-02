@@ -4024,6 +4024,20 @@
     <Compile Include="MasterPages\AccessPointRoot.Master.designer.cs">
       <DependentUpon>AccessPointRoot.Master</DependentUpon>
     </Compile>
+    <Compile Include="Modules\AccessPointFooter.ascx.cs">
+      <DependentUpon>AccessPointFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\AccessPointFooter.ascx.designer.cs">
+      <DependentUpon>AccessPointFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AccessPointHeader.ascx.cs">
+      <DependentUpon>AccessPointHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\AccessPointHeader.ascx.designer.cs">
+      <DependentUpon>AccessPointHeader.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\LatestProducts.ascx.cs">
       <DependentUpon>LatestProducts.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6387,6 +6401,8 @@
     <Content Include="js\jquery.jcarousel.min.js" />
     <Content Include="js\jquery.nivo.slider.pack.js" />
     <Content Include="js\tabs.js" />
+    <Content Include="Modules\AccessPointFooter.ascx" />
+    <Content Include="Modules\AccessPointHeader.ascx" />
     <Content Include="Modules\LatestProducts.ascx" />
     <Content Include="Modules\ProductBox_Latest.ascx" />
     <Content Include="Modules\ProductBox_Latest_Home.ascx" />
