@@ -2,22 +2,6 @@
     Inherits="NopSolutions.NopCommerce.Web.Modules.AccessPointHeader" %>
 <%@ Register TagPrefix="nopCommerce" TagName="CategoryNavigation" Src="CategoryNavigation.ascx" %>
 <header id="header">
-      <div class="htop">
-        <div id="language"> <span>Language<b></b></span>
-          <ul>
-            <li><a title="English"><img src="../image/flags/gb.png" alt="English" />English</a></li>
-            <li><a title="Türkçe"><img src="../image/flags/tr.png" alt="Türkçe" />Türkçe</a></li>
-          </ul>
-        </div>
-        <div id="currency"> <span>Currency<b></b></span>
-          <ul>
-            <li> <a title="Euro">€ - Euro</a> </li>
-            <li> <a title="Pound Sterling">£ - Pound Sterling</a> </li>
-            <li> <a title="US Dollar"><b>$ - US Dollar</b></a> </li>
-          </ul>
-        </div>
-        <div class="links"> <a href="login.html">Login</a> <a href="register.html">Register</a> <a href="#" id="wishlist-total">Wish List (0)</a> <a href="#">My Account</a> <a href="checkout.html">Checkout</a> </div>
-      </div>
       <section class="hsecond">
         <div id="logo"><a href="index-2.html"><img src="../image/logo.png" title="Polishop" alt="Polishop" /></a></div>
         <div id="search">

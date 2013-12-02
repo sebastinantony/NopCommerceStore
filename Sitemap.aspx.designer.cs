@@ -13,39 +13,39 @@ namespace NopSolutions.NopCommerce.Web {
     public partial class Sitemap {
         
         /// <summary>
-        /// dlTopics control.
+        /// rpTopics control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlTopics;
+        protected global::System.Web.UI.WebControls.Repeater rpTopics;
         
         /// <summary>
-        /// dlCategories control.
+        /// rpCategories control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlCategories;
+        protected global::System.Web.UI.WebControls.Repeater rpCategories;
         
         /// <summary>
-        /// dlManufacturers control.
+        /// rpManufacturers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlManufacturers;
+        protected global::System.Web.UI.WebControls.Repeater rpManufacturers;
         
         /// <summary>
-        /// dlProducts control.
+        /// rpProducts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlProducts;
+        protected global::System.Web.UI.WebControls.Repeater rpProducts;
     }
 }

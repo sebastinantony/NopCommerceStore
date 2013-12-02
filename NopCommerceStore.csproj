@@ -111,12 +111,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutUs.aspx.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
+    <Compile Include="aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AboutUs.aspx.designer.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
+    <Compile Include="aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
     </Compile>
     <Compile Include="AccessPointModules\HomePageProducts.ascx.cs">
       <DependentUpon>HomePageProducts.ascx</DependentUpon>
@@ -5997,6 +5997,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="aboutus.aspx" />
     <Content Include="AccessPointModules\HomePageProducts.ascx" />
     <Content Include="Account.aspx" />
     <Content Include="AddressEdit.aspx" />
@@ -6997,7 +6998,6 @@
     <Content Include="MasterPages\AccessPointInnerTemplate.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AboutUs.aspx" />
     <Content Include="Administration\ActivityLog.aspx" />
     <Content Include="Administration\ActivityLogHome.aspx" />
     <Content Include="Administration\ActivityTypes.aspx" />

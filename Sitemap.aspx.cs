@@ -59,12 +59,12 @@ namespace NopSolutions.NopCommerce.Web
             }
             if (sitemapTopics.Count > 0)
             {
-                dlTopics.DataSource = sitemapTopics;
-                dlTopics.DataBind();
+                rpTopics.DataSource = sitemapTopics;
+                rpTopics.DataBind();
             }
             else
             {
-                dlTopics.Visible = false;
+                rpTopics.Visible = false;
             }
 
             //categories
@@ -74,17 +74,17 @@ namespace NopSolutions.NopCommerce.Web
                 var categories = this.CategoryService.GetAllCategoriesByParentCategoryId(0);
                 if (categories.Count > 0)
                 {
-                    dlCategories.DataSource = categories;
-                    dlCategories.DataBind();
+                    rpCategories.DataSource = categories;
+                    rpCategories.DataBind();
                 }
                 else
                 {
-                    dlCategories.Visible = false;
+                    rpCategories.Visible = false;
                 }
             }
             else
             {
-                dlCategories.Visible = false;
+                rpCategories.Visible = false;
             }
 
             //manufacturers
@@ -93,17 +93,17 @@ namespace NopSolutions.NopCommerce.Web
                 var manufacturers = this.ManufacturerService.GetAllManufacturers();
                 if (manufacturers.Count > 0)
                 {
-                    dlManufacturers.DataSource = this.ManufacturerService.GetAllManufacturers();
-                    dlManufacturers.DataBind();
+                    rpManufacturers.DataSource = this.ManufacturerService.GetAllManufacturers();
+                    rpManufacturers.DataBind();
                 }
                 else
                 {
-                    dlManufacturers.Visible = false;
+                    rpManufacturers.Visible = false;
                 }
             }
             else
             {
-                dlManufacturers.Visible = false;
+                rpManufacturers.Visible = false;
             }
 
             //products
@@ -112,17 +112,17 @@ namespace NopSolutions.NopCommerce.Web
                 var products = this.ProductService.GetAllProducts();
                 if (products.Count > 0)
                 {
-                    dlProducts.DataSource = products;
-                    dlProducts.DataBind();
+                    rpProducts.DataSource = products;
+                    rpProducts.DataBind();
                 }
                 else
                 {
-                    dlProducts.Visible = false;
+                    rpProducts.Visible = false;
                 }
             }
             else
             {
-                dlProducts.Visible = false;
+                rpProducts.Visible = false;
             }
         }
 
@@ -134,7 +134,7 @@ namespace NopSolutions.NopCommerce.Web
             }
         }
 
-        protected void dlCategories_ItemDataBound(object sender, DataListItemEventArgs e)
+        protected void dlCategories_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
@@ -149,7 +149,7 @@ namespace NopSolutions.NopCommerce.Web
             }
         }
 
-        protected void dlManufacturers_ItemDataBound(object sender, DataListItemEventArgs e)
+        protected void dlManufacturers_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
@@ -164,7 +164,7 @@ namespace NopSolutions.NopCommerce.Web
             }
         }
 
-        protected void dlProducts_ItemDataBound(object sender, DataListItemEventArgs e)
+        protected void dlProducts_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
@@ -179,7 +179,15 @@ namespace NopSolutions.NopCommerce.Web
             }
         }
 
-        protected void dlTopics_ItemDataBound(object sender, DataListItemEventArgs e)
+
+        private class SitemapTopic
+        {
+            public string Name { get; set; }
+            public string Url { get; set; }
+        }
+
+
+        protected void rpTopics_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
@@ -192,12 +200,6 @@ namespace NopSolutions.NopCommerce.Web
                     hlLink.Text = Server.HtmlEncode(sitemapTopic.Name);
                 }
             }
-        }
-
-        private class SitemapTopic
-        {
-            public string Name { get; set; }
-            public string Url { get; set; }
         }
     }
 }

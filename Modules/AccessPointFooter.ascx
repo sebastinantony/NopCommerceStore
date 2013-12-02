@@ -34,25 +34,25 @@
                   js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
                   fjs.parentNode.insertBefore(js, fjs);
               } (document, 'script', 'facebook-jssdk'));</script>
-          <div class="fb-like-box" data-href="http://www.facebook.com/160281810726316" data-width="322" data-show-faces="true" data-stream="false" data-header="false" data-colorscheme="dark" data-connections="16" data-color-scheme="dark" data-border-color="#222222"></div>
+          <div class="fb-like-box" data-href="http://www.facebook.com/teamaccesspoint" data-width="322" data-show-faces="true" data-stream="false" data-header="false" data-colorscheme="dark" data-connections="16" data-color-scheme="dark" data-border-color="#222222"></div>
         </div>
         <!-- Facebook Box Part End-->
       </div>
       <div class="column">
         <h3>Information</h3>
         <ul>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="about-us.html">Delivery Information</a></li>
-          <li><a href="about-us.html">Privacy Policy</a></li>
-          <li><a href="elements.html">Elements</a></li>
+          <li><a href="aboutus.aspx">About Us</a></li>
+          <li><a href="aboutus.aspx">Delivery Information</a></li>
+          <li><a href="aboutus.aspx">Privacy Policy</a></li>
+          <li><a href="aboutus.aspx">Elements</a></li>
         </ul>
       </div>
       <div class="column">
         <h3>Customer Service</h3>
         <ul>
-          <li><a href="contact-us.html">Contact Us</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="sitemap.html">Site Map</a></li>
+          <li><a href="ContactUs.aspx">Contact Us</a></li>
+          <li><a href="ContactUs.aspx">Returns</a></li>
+          <li><a href="sitemap.aspx">Site Map</a></li>
         </ul>
       </div>
       <div class="column">
@@ -96,7 +96,7 @@
         </div>
         <!-- Powered by Text End-->
         <!-- Follow Social Icons Start-->
-        <div class="social part3"> <a href="http://facebook.com/harnishdesign" target="_blank"><img src="../image/facebook.png" alt="Facebook" title="Facebook"></a> <a href="https://twitter.com/#!/harnishdesign" target="_blank"><img src="../image/twitter.png" alt="Twitter" title="Twitter"> </a> <a href="#" target="_blank"> <img src="../image/googleplus.png" alt="Google+" title="Google+"> </a> <a href="#" target="_blank"> <img src="../image/pinterest.png" alt="Pinterest" title="Pinterest"> </a> <a href="#" target="_blank"> <img src="../image/rss.png" alt="RSS" title="RSS"> </a> <a href="http://www.vimeo.com/#" target="_blank"> <img src="../image/vimeo.png" alt="Vimeo" title="Vimeo"> </a> </div>
+        <div class="social part3"> <a href="http://www.facebook.com/teamaccesspoint" target="_blank"><img src="../image/facebook.png" alt="Facebook" title="Facebook"></a> <a href="https://twitter.com/#!/harnishdesign" target="_blank"><img src="../image/twitter.png" alt="Twitter" title="Twitter"> </a> <a href="#" target="_blank"> <img src="../image/googleplus.png" alt="Google+" title="Google+"> </a> <a href="#" target="_blank"> <img src="../image/pinterest.png" alt="Pinterest" title="Pinterest"> </a> <a href="#" target="_blank"> <img src="../image/rss.png" alt="RSS" title="RSS"> </a> <a href="http://www.vimeo.com/#" target="_blank"> <img src="../image/vimeo.png" alt="Vimeo" title="Vimeo"> </a> </div>
         <!-- Follow Social Icons End-->
         <div class="clear"></div>
       </div>
