@@ -57,8 +57,12 @@ namespace NopSolutions.NopCommerce.Web.Modules
             {
                 var manufacturer = e.Item.DataItem as Manufacturer;
                 var hlManufacturer = e.Item.FindControl("hlManufacturer") as HyperLink;
+                var hlImageLink = e.Item.FindControl("hlImageLink") as HyperLink;
+
+                
                 if (hlManufacturer != null)
                 {
+                    hlImageLink.NavigateUrl = SEOHelper.GetManufacturerUrl(manufacturer);
                     hlManufacturer.NavigateUrl = SEOHelper.GetManufacturerUrl(manufacturer);
                 }
             }

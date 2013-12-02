@@ -5,6 +5,8 @@
     TagPrefix="uc1" %>
 <%@ Register TagPrefix="nopCommerce" TagName="CategoryNavigation" Src="~/Modules/CategoryNavigation.ascx" %>
 <%@ Register Src="../Modules/LatestProducts.ascx" TagName="LatestProducts" TagPrefix="uc2" %>
+<%@ Register Src="../Modules/ManufacturerNavigation.ascx" TagName="ManufacturerNavigation"
+    TagPrefix="uc3" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
@@ -244,11 +246,15 @@
                     <!-- Welcom Text End-->
                     <!-- Featured Product Start-->
                     <uc1:HomePageProducts ID="HomePageProducts1" runat="server" />
-                    
                     <!-- Featured Product End-->
                     <!-- Product Tab Start-->
                     <uc2:LatestProducts ID="LatestProducts1" runat="server" />
                     <!-- Product Tab End-->
+                    <!-- Carousel Start-->
+                    <section class="box">
+                    <uc3:ManufacturerNavigation ID="ManufacturerNavigation1" runat="server" />
+        </section>
+                    <!-- Carousel End-->
                     <script type="text/javascript">
                         (function () {
                             // store the slider in a local variable
@@ -274,18 +280,6 @@
                             });
                         } ());
                     </script>
-                    <!-- Carousel Start-->
-                    <section id="carousel">
-          <ul class="jcarousel-skin-opencart">
-            <li><a href="#"><img src="../image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-            <li><a href="#"><img src="../image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-            <li><a href="#"><img src="../image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-            <li><a href="#"><img src="../image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-            <li><a href="#"><img src="../image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-            <li><a href="#"><img src="../image/product/brand_logo.jpg" alt="brand_logo" title="brand_logo" /></a></li>
-          </ul>
-        </section>
-                    <!-- Carousel End-->
                 </div>
                 <div class="clear">
                 </div>
