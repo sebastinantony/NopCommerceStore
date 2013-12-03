@@ -3,7 +3,7 @@
 <%@ Register TagPrefix="nopCommerce" TagName="CategoryNavigation" Src="CategoryNavigation.ascx" %>
 <header id="header">
       <section class="hsecond">
-        <div id="logo"><a href="index-2.html"><img src="../image/logo.png" title="Polishop" alt="Polishop" /></a></div>
+        <div id="logo"><a href="/index.aspx"><img src="../image/logo.png" title="Polishop" alt="Polishop" /></a></div>
         <div id="search">
           <div class="button-search"></div>
           <input type="text" name="search" placeholder="Search" value="" />
@@ -13,42 +13,42 @@
       <!--Top Menu(Horizontal Categories) Start-->
       <nav id="menu">
         <ul>
-          <li class="home"><a title="Home" href="~/index.aspx"><span>Home</span></a></li>
+          <li class="home"><a title="Home" href="/index.aspx"><span>Home</span></a></li>
           <li class="categories_hor"><a>Categories</a>
             <nopCommerce:CategoryNavigation ID="ctrlCategoryNavigation" runat="server" />
           </li>
           <li><a target="_blank" href="#">Headers</a>
             <div>
               <ul>
-                <li><a href="~/index.aspx">Header Style 1</a></li>
-                <li><a href="~/index.aspx">Header Style 2</a></li>
-                <li><a href="~/index.aspx">Header Style 3</a></li>
+                <li><a href="/index.aspx">Header Style 1</a></li>
+                <li><a href="/index.aspx">Header Style 2</a></li>
+                <li><a href="/index.aspx">Header Style 3</a></li>
               </ul>
             </div>
           </li>
           <li><a target="_blank" href="#">Menus</a>
             <div>
               <ul>
-                <li><a href="~/index.aspx">Horizontal Categories</a></li>
-                <li><a href="~/aboutus.aspx">Vertical Categories</a></li>
-                <li><a href="~/aboutus.aspx">Simple Categories</a></li>
+                <li><a href="/index.aspx">Horizontal Categories</a></li>
+                <li><a href="/aboutus.aspx">Vertical Categories</a></li>
+                <li><a href="/aboutus.aspx">Simple Categories</a></li>
               </ul>
             </div>
           </li>
           <li><a target="_blank" href="#">Sliders</a>
             <div>
               <ul>
-                <li><a href="~/index.aspx">Nivo Slider</a></li>
-                <li><a href="~/aboutus.aspx">Flex Slider</a></li>
+                <li><a href="/index.aspx">Nivo Slider</a></li>
+                <li><a href="/aboutus.aspx">Flex Slider</a></li>
               </ul>
             </div>
           </li>
           <li><a target="_blank" href="#">Footers</a>
             <div>
               <ul>
-                <li><a href="~/index.aspx">Footer Style 1</a></li>
-                <li><a href="~/aboutus.aspx">Footer Style 2</a></li>
-                <li><a href="~/aboutus.aspx">Footer Style 3</a></li>
+                <li><a href="/index.aspx">Footer Style 1</a></li>
+                <li><a href="/aboutus.aspx">Footer Style 2</a></li>
+                <li><a href="/aboutus.aspx">Footer Style 3</a></li>
               </ul>
             </div>
           </li>
@@ -84,14 +84,14 @@
           <li><a>Information</a>
             <div>
               <ul>
-                <li><a href="~/aboutus.aspx">About Us</a></li>
-                <li><a href="~/aboutus.aspx">Delivery Information</a></li>
-                <li><a href="~/aboutus.aspx">Privacy Policy</a></li>
-                <li><a href="~/aboutus.aspx">Elements</a></li>
+                <li><a href="/aboutus.aspx">About Us</a></li>
+                <li><a href="/aboutus.aspx">Delivery Information</a></li>
+                <li><a href="/aboutus.aspx">Privacy Policy</a></li>
+                <li><a href="/aboutus.aspx">Elements</a></li>
               </ul>
             </div>
           </li>
-          <li><a href="~/ContactUs.aspx">Contact Us</a></li>
+          <li><a href="/ContactUs.aspx">Contact Us</a></li>
         </ul>
       </nav>
       <!--Top Menu(Horizontal Categories) End-->

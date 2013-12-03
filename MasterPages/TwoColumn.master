@@ -27,10 +27,10 @@
                                 <li>
                                     <div class="slide-inner">
                                         <div class="image">
-                                            <a href="product.html">
+                                            <a href="/index.aspx">
                                                 <img src="../image/product/sony_vaio_1-45x45.jpg" alt="Friendly Jewelry" /></a></div>
                                         <div class="name">
-                                            <a href="product.html">Friendly Jewelry</a></div>
+                                            <a href="/index.aspx">Friendly Jewelry</a></div>
                                         <div class="price">
                                             $1,177.00</div>
                                         <div class="clear">
@@ -40,10 +40,10 @@
                                 <li>
                                     <div class="slide-inner">
                                         <div class="image">
-                                            <a href="product.html">
+                                            <a href="/index.aspx">
                                                 <img src="../image/product/apple_cinema_30-45x45.jpg" alt="Apple Cinema 30&quot;" /></a></div>
                                         <div class="name">
-                                            <a href="product.html">Apple Cinema 30&quot;</a></div>
+                                            <a href="/index.aspx">Apple Cinema 30&quot;</a></div>
                                         <div class="price">
                                             <span class="price-old">$119.50</span> <span class="price-new">$107.75</span></div>
                                         <div class="clear">
@@ -53,10 +53,10 @@
                                 <li>
                                     <div class="slide-inner">
                                         <div class="image">
-                                            <a href="product.html">
+                                            <a href="/index.aspx">
                                                 <img src="../image/product/ipod_classic_1-45x45.jpg" alt="iPad Classic" /></a></div>
                                         <div class="name">
-                                            <a href="product.html">iPad Classic</a></div>
+                                            <a href="/index.aspx">iPad Classic</a></div>
                                         <div class="price">
                                             $119.50</div>
                                         <div class="clear">
@@ -66,10 +66,10 @@
                                 <li>
                                     <div class="slide-inner">
                                         <div class="image">
-                                            <a href="product.html">
+                                            <a href="/index.aspx">
                                                 <img src="../image/product/lotto-sports-shoes-white-45x45.jpg" alt="Lotto Sports Shoes" /></a></div>
                                         <div class="name">
-                                            <a href="product.html">Lotto Sports Shoes</a></div>
+                                            <a href="/index.aspx">Lotto Sports Shoes</a></div>
                                         <div class="price">
                                             $589.50</div>
                                         <div class="clear">
@@ -79,10 +79,10 @@
                                 <li>
                                     <div class="slide-inner">
                                         <div class="image">
-                                            <a href="product.html">
+                                            <a href="/index.aspx">
                                                 <img src="../image/product/Jeep-Casual-Shoes-45x45.jpg" alt="Jeep-Casual-Shoes" /></a></div>
                                         <div class="name">
-                                            <a href="product.html">Jeep-Casual-Shoes</a></div>
+                                            <a href="/index.aspx">Jeep-Casual-Shoes</a></div>
                                         <div class="price">
                                             $131.25</div>
                                         <div class="clear">
