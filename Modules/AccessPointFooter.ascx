@@ -41,10 +41,10 @@
       <div class="column">
         <h3>Information</h3>
         <ul>
-          <li><a href="aboutus.aspx">About Us</a></li>
-          <li><a href="aboutus.aspx">Delivery Information</a></li>
-          <li><a href="aboutus.aspx">Privacy Policy</a></li>
-          <li><a href="aboutus.aspx">Elements</a></li>
+          <li><a href="~/aboutus.aspx">About Us</a></li>
+          <li><a href="~/aboutus.aspx">Delivery Information</a></li>
+          <li><a href="~/aboutus.aspx">Privacy Policy</a></li>
+          <li><a href="~/aboutus.aspx">Elements</a></li>
         </ul>
       </div>
       <div class="column">
