@@ -157,12 +157,12 @@ namespace NopSolutions.NopCommerce.Web.Templates.Categories
                 this.catalogPager.TotalRecords = totalRecords;
                 this.catalogPager.PageIndex = this.CurrentPageIndex;
 
-                this.lvCatalog.DataSource = productCollection;
-                this.lvCatalog.DataBind();
+                this.dlCatalog.DataSource = productCollection;
+                this.dlCatalog.DataBind();
             }
             else
             {
-                this.lvCatalog.Visible = false;
+                this.dlCatalog.Visible = false;
                 this.pnlSorting.Visible = false;
             }
         }

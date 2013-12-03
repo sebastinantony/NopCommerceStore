@@ -12,7 +12,7 @@
     </div>
     <div class="sub-category-grid">
         <asp:DataList ID="dlSubCategories" runat="server" RepeatColumns="3" RepeatDirection="Horizontal"
-            RepeatLayout="Table" OnItemDataBound="dlSubCategories_ItemDataBound" ItemStyle-CssClass="item-box">
+            RepeatLayout="Table" OnItemDataBound="dlSubCategories_ItemDataBound" ItemStyle-CssClass="item-box" Visible="false">
             <ItemTemplate>
                 <div class="sub-category-item">
                     <h2 class="category-title">
@@ -27,7 +27,7 @@
     </div>
     <div class="clear">
     </div>
-    <asp:Panel runat="server" ID="pnlFeaturedProducts" class="featured-product-grid">
+    <asp:Panel runat="server" ID="pnlFeaturedProducts" class="featured-product-grid" Visible="false">
         <div class="title">
             <%=GetLocaleResourceString("Products.FeaturedProducts")%>
         </div>
@@ -46,7 +46,7 @@
     
     <div class="clear">
     </div>
-    <asp:Panel runat="server" ID="pnlFilters" CssClass="product-filters">
+    <asp:Panel runat="server" ID="pnlFilters" CssClass="product-filters" Visible ="false">
         <div class="filter-title">
             <asp:Label runat="server" ID="lblProductFilterTitle">
                 <%=GetLocaleResourceString("Products.FilterOptionsTitle")%>
@@ -56,7 +56,7 @@
             <nopCommerce:PriceRangeFilter ID="ctrlPriceRangeFilter" runat="server" />
         </div>
         <div class="filter-item">
-            <nopCommerce:ProductSpecificationFilter ID="ctrlProductSpecificationFilter" runat="server" />
+            <nopCommerce:ProductSpecificationFilter ID="ctrlProductSpecificationFilter" runat="server"  Visible ="false"/>
         </div>
     </asp:Panel>
     <div class="clear">

@@ -191,7 +191,7 @@ namespace NopSolutions.NopCommerce.Web.Templates.Categories
 
         protected override void OnPreRender(EventArgs e)
         {
-            this.pnlFilters.Visible = ctrlPriceRangeFilter.Visible || ctrlProductSpecificationFilter.Visible;
+            this.pnlFilters.Visible = false;
             base.OnPreRender(e);
         }
 

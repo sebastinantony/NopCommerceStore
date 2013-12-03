@@ -13,13 +13,13 @@ namespace NopSolutions.NopCommerce.Web.Templates.Categories {
     public partial class ProductsInLines1 {
         
         /// <summary>
-        /// rptrCategoryBreadcrumb control.
+        /// Repeater1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptrCategoryBreadcrumb;
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
         
         /// <summary>
         /// lDescription control.
@@ -58,22 +58,22 @@ namespace NopSolutions.NopCommerce.Web.Templates.Categories {
         protected global::System.Web.UI.WebControls.DataList dlFeaturedProducts;
         
         /// <summary>
-        /// pnlSorting control.
+        /// Panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlSorting;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// ddlSorting control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSorting;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
         /// pnlFilters control.
@@ -112,13 +112,13 @@ namespace NopSolutions.NopCommerce.Web.Templates.Categories {
         protected global::NopSolutions.NopCommerce.Web.Modules.ProductSpecificationFilterControl ctrlProductSpecificationFilter;
         
         /// <summary>
-        /// lvCatalog control.
+        /// lvCatalog1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lvCatalog;
+        protected global::System.Web.UI.WebControls.ListView lvCatalog1;
         
         /// <summary>
         /// catalogPager control.
@@ -128,5 +128,59 @@ namespace NopSolutions.NopCommerce.Web.Templates.Categories {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::NopSolutions.NopCommerce.Controls.Pager catalogPager;
+        
+        /// <summary>
+        /// rptrCategoryBreadcrumb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptrCategoryBreadcrumb;
+        
+        /// <summary>
+        /// lblCatgory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCatgory;
+        
+        /// <summary>
+        /// pnlSorting control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlSorting;
+        
+        /// <summary>
+        /// ddlSorting control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSorting;
+        
+        /// <summary>
+        /// dlCatalog control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList dlCatalog;
+        
+        /// <summary>
+        /// productsPager control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::NopSolutions.NopCommerce.Controls.Pager productsPager;
     }
 }

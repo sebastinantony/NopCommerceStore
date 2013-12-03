@@ -4,13 +4,14 @@
 <%@ Register TagPrefix="nopCommerce" TagName="ProductBox1" Src="~/Modules/ProductBox1.ascx" %>
 <%@ Register TagPrefix="nopCommerce" TagName="PriceRangeFilter" Src="~/Modules/PriceRangeFilter.ascx" %>
 <%@ Register TagPrefix="nopCommerce" TagName="ProductSpecificationFilter" Src="~/Modules/ProductSpecificationFilter.ascx" %>
-<div class="category-page">
+
+<div class="category-page" style="display:none;">
     <% if (this.SettingManager.GetSettingValueBoolean("Media.CategoryBreadcrumbEnabled"))
        { %>
     <div class="breadcrumb">
         <a href='<%=CommonHelper.GetStoreLocation()%>'>
             <%=GetLocaleResourceString("Breadcrumb.Top")%></a> /
-        <asp:Repeater ID="rptrCategoryBreadcrumb" runat="server">
+        <asp:Repeater ID="Repeater1" runat="server">
             <ItemTemplate>
                 <a href='<%#SEOHelper.GetCategoryUrl(Convert.ToInt32(Eval("CategoryId"))) %>'>
                     <%#Server.HtmlEncode(Eval("LocalizedName").ToString())%></a>
@@ -62,9 +63,9 @@
     </asp:Panel>
     <div class="clear">
     </div>
-    <asp:Panel runat="server" ID="pnlSorting" CssClass="product-sorting">
+    <asp:Panel runat="server" ID="Panel1" CssClass="product-sorting">
         <%=GetLocaleResourceString("ProductSorting.SortBy")%>
-        <asp:DropDownList ID="ddlSorting" runat="server" OnSelectedIndexChanged="ddlSorting_SelectedIndexChanged"
+        <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="ddlSorting_SelectedIndexChanged"
             AutoPostBack="true" />
     </asp:Panel>
     <div class="clear">
@@ -85,7 +86,7 @@
     <div class="clear">
     </div>
     <div class="product-list1">
-        <asp:ListView ID="lvCatalog" runat="server">
+        <asp:ListView ID="lvCatalog1" runat="server">
             <LayoutTemplate>
                 <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
             </LayoutTemplate>
@@ -105,3 +106,51 @@
         </div>
     </div>
 </div>
+
+<div id="content">
+        <!--Breadcrumb Part Start-->
+        <% if (this.SettingManager.GetSettingValueBoolean("Media.CategoryBreadcrumbEnabled"))
+        { %>
+            <div class="breadcrumb">
+                <a href='<%=CommonHelper.GetStoreLocation()%>'>
+                    <%=GetLocaleResourceString("Breadcrumb.Top")%></a> &nbsp;&raquo; &nbsp;
+                <asp:Repeater ID="rptrCategoryBreadcrumb" runat="server">
+                    <ItemTemplate>
+                        <a href='<%#SEOHelper.GetCategoryUrl(Convert.ToInt32(Eval("CategoryId"))) %>'>
+                            <%#Server.HtmlEncode(Eval("LocalizedName").ToString())%></a>
+                    </ItemTemplate>
+                    <SeparatorTemplate>
+                        &nbsp;&raquo; &nbsp;
+                    </SeparatorTemplate>
+                </asp:Repeater>
+            </div>
+        <% } %>
+        <!--Breadcrumb Part End-->
+        <h1>
+            <asp:Label ID="lblCatgory" runat="server" Text=""></asp:Label></h1>
+        <asp:Panel runat="server" ID="pnlSorting" CssClass="product-filter">
+        <div class="sort"><b><%=GetLocaleResourceString("ProductSorting.SortBy")%></b>
+        <asp:DropDownList ID="ddlSorting" runat="server" OnSelectedIndexChanged="ddlSorting_SelectedIndexChanged"
+            AutoPostBack="true" />
+        </asp:Panel>
+        <!--Product List Start-->
+        <div class="product-grid">
+        
+    </div>
+        <div class="product-list">
+        <asp:DataList ID="dlCatalog" runat="server" >
+            <ItemTemplate>
+                <nopCommerce:ProductBox1 ID="ctrlProductBox" Product='<%# Container.DataItem %>'
+                    runat="server" />
+            </ItemTemplate>
+        </asp:DataList>
+        </div>
+        <!--Product List End-->
+        <!--Pagination Part Start-->
+        <div class="pagination">
+          <nopCommerce:Pager runat="server" ID="productsPager" FirstButtonText="<% $NopResources:Pager.First %>"
+            LastButtonText="<% $NopResources:Pager.Last %>" NextButtonText="<% $NopResources:Pager.Next %>"
+            PreviousButtonText="<% $NopResources:Pager.Previous %>" CurrentPageText="Pager.CurrentPage" />
+        </div>
+        <!--Pagination Part End-->
+      </div>
