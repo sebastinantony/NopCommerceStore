@@ -43,7 +43,8 @@ namespace NopSolutions.NopCommerce.Web.Modules
                 string productURL = SEOHelper.GetProductUrl(product);
 
                 hlProduct.NavigateUrl = productURL;
-                hlProduct.Text = Server.HtmlEncode(product.LocalizedName).Substring(0, 14) + " ...";
+                if (Server.HtmlEncode(product.LocalizedName).Length >=14)
+                    hlProduct.Text = Server.HtmlEncode(product.LocalizedName).Substring(0, 14) + " ...";
                 hlProduct.ToolTip = String.Format(GetLocaleResourceString("Media.Product.ImageLinkTitleFormat"), product.LocalizedName);
 
                 var picture = product.DefaultPicture;
