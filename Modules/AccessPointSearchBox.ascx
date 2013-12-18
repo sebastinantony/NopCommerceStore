@@ -1,5 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="NopSolutions.NopCommerce.Web.Modules.SearchBoxControl"
-    CodeBehind="SearchBox.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AccessPointSearchBox.ascx.cs" Inherits="NopSolutions.NopCommerce.Web.Modules.AccessPointSearchBox" %>
 <script type="text/javascript">
     var location = window.location.origin;
     var searchPage = null;

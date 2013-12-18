@@ -2,10 +2,17 @@
     Inherits="NopSolutions.NopCommerce.Web.Modules.AccessPointHeader" %>
 <%@ Register TagPrefix="nopCommerce" TagName="CategoryNavigation" Src="CategoryNavigation.ascx" %>
 <header id="header">
+    <div class="htop">
+        <div id="language"> Serving your Computing needs</div>
+          
+        
+        
+        <div class="links"> <span class="last-cust">Customer support</span> - Mon-Sat, 9.30 am to 8.00 pm - <span class="last-custo">+91 9846908060</span></div>
+      </div>
       <section class="hsecond">
         <div id="logo"><a href="/index.aspx"><img src="../image/logo.png" title="Polishop" alt="Polishop" /></a></div>
         <div id="search">
-          <div class="button-search"></div>
+            <div class="button-search"></div>
           <input type="text" name="search" placeholder="Search" value="" />
         </div>
         <div class="clear"></div>

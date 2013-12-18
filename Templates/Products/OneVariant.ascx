@@ -22,161 +22,97 @@
     EnableScriptLocalization="true" ID="sm1" ScriptMode="Release" CompositeScript-ScriptMode="Release" />
 <!--Middle Part Start-->
 <div id="content">
-                    <% if (this.SettingManager.GetSettingValueBoolean("Media.CategoryBreadcrumbEnabled"))
-                    { %>
-                        <nopCommerce:ProductCategoryBreadcrumb ID="ctrlProductCategoryBreadcrumb" runat="server" />
-                    <% } %>
-                    <h1>
-                        <asp:Literal ID="lProductName" runat="server" /></h1>
-                    <div class="product-info">
-                        <div class="left">
-                            <div class="image">
-                            <a runat="server" 
-                            class="cloud-zoom colorbox" id='lnkMainLightbox' rel="adjustX: 0, adjustY:0, tint:'#000000',tintOpacity:0.2, zoomWidth:360, position:'inside', showTitle:false">
-                <asp:Image ID="defaultImage" runat="server" /><span id="Span1"><i class="zoom_bttn"></i> Zoom</span>
-            </a>
+    <% if (this.SettingManager.GetSettingValueBoolean("Media.CategoryBreadcrumbEnabled"))
+       { %>
+    <nopCommerce:ProductCategoryBreadcrumb ID="ctrlProductCategoryBreadcrumb" runat="server" />
+    <% } %>
+    <h1>
+        <asp:Literal ID="lProductName" runat="server" /></h1>
+    <div class="product-info">
+        <div class="left">
+            <div class="image">
+                <a runat="server"
+                    class="cloud-zoom colorbox" id='lnkMainLightbox' rel="adjustX: 0, adjustY:0, tint:'#000000',tintOpacity:0.2, zoomWidth:360, position:'inside', showTitle:false">
+                    <asp:Image ID="defaultImage" runat="server" /><span id="Span1"><i class="zoom_bttn"></i> Zoom</span>
+                </a>
             </div>
-            <asp:ListView ID="lvProductPictures" runat="server" GroupItemCount="3">
-                <ItemTemplate>
-                    <div class="image-additional">
+            <div class="image-additional">
+                <asp:ListView ID="lvProductPictures" runat="server" GroupItemCount="3">
+                    <LayoutTemplate>
+                        <asp:PlaceHolder runat="server" ID="groupPlaceHolder"></asp:PlaceHolder>
+                    </LayoutTemplate>
+                    <GroupTemplate>
+                        <asp:PlaceHolder runat="server" ID="itemPlaceHolder"></asp:PlaceHolder>
+                    </GroupTemplate>
+                    <ItemTemplate>
                         <a href="<%#this.PictureService.GetPictureUrl((Picture)Container.DataItem)%>" class="cloud-zoom-gallery"
-                         
                             title="<%= lProductName.Text%>">
                             <img src="<%#this.PictureService.GetPictureUrl((Picture)Container.DataItem, 70)%>" width="62" alt="Product image" /></a>
-                    </td>
-                </ItemTemplate>
-            </asp:ListView>
-                            
-                        </div>
-                        <div class="right">
-                            <div class="description">
-                                <span>Description: </span> 
-                                <asp:Literal ID="lShortDescription" runat="server" />
-                                </div>
-                            <div class="price">
-                                <nopCommerce:ProductPrice1 ID="ctrlProductPrice" runat="server" />
-                            </div>
-                            <div class="options">
-                                <h2>
-                                    Available Options</h2>
-                                <div id="option-226" class="option">
-                                    <span class="required">*</span> <b>Select:</b><br />
-                                    <select name="option">
-                                        <option value="">--- Please Select --- </option>
-                                        <option value="15">Red</option>
-                                        <option value="16">Blue</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="cart">
-                                <div>
-                                    <div class="qty">
-                                        <strong>Qty:</strong> <a class="qtyBtn mines" href="javascript:void(0);">-</a>
-                                        <input id="qty" type="text" class="w30" name="quantity" size="2" value="1" />
-                                        <a class="qtyBtn plus" href="javascript:void(0);">+</a>
-                                        <input type="hidden" name="product_id" size="2" value="30" />
-                                        <div class="clear">
-                                        </div>
-                                    </div>
-                                    <input type="button" value="Add to Cart" id="button-cart" class="button" />
-                                </div>
-                                <div>
-                                    <a href="#" class="wishlist">Add to Wish List</a> <a href="#" class="wishlist">Add to
-                                        Compare</a></div>
-                            </div>
-                            <div class="review">
-                                <div>
-                                    <img src="image/stars-3.png" alt="2 reviews" />&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');">0
-                                        reviews</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');">Write
-                                            a review</a></div>
-                            </div>
-                            <!-- AddThis Button BEGIN -->
-                            <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-506f325f57fbfc95"></script>
-                            <!-- AddThis Button END -->
-                        </div>
-                    </div>
-                    <!-- Description and Reviews Tab Start -->
-                    <div id="tabs" class="htabs">
-                        <a href="#tab-description">Description</a> <a href="#tab-review">Reviews (0)</a>
-                    </div>
-                    <div id="tab-description" class="tab-content">
-                        <asp:Literal ID="lFullDescription" runat="server" />
-                    </div>
-                    <div id="tab-review" class="tab-content">
-                        <div id="review">
-                        </div>
-                        <h2 id="review-title">
-                            Write a review</h2>
-                        <br />
-                        <b>Your Name:</b><br />
-                        <input type="text" name="name" value="" />
-                        <br />
-                        <br />
-                        <b>Your Review:</b>
-                        <textarea name="text" cols="40" rows="8" style="width: 98%;"></textarea>
-                        <span style="font-size: 11px;"><span style="color: #FF0000;">Note:</span> HTML is not
-                            translated!</span><br />
-                        <br />
-                        <b>Rating:</b> <span>Bad</span>&nbsp;
-                        <input type="radio" name="rating" value="1" />
-                        &nbsp;
-                        <input type="radio" name="rating" value="2" />
-                        &nbsp;
-                        <input type="radio" name="rating" value="3" />
-                        &nbsp;
-                        <input type="radio" name="rating" value="4" />
-                        &nbsp;
-                        <input type="radio" name="rating" value="5" />
-                        &nbsp;<span>Good</span><br />
-                        <br />
-                        <b>Enter the code in the box below:</b><br />
-                        <input type="text" name="captcha" value="" />
-                        <br />
-                        <br />
-                        <img src="indexffc1.html?route=product/product/captcha" alt="" id="captcha" /><br />
-                        <br />
-                        <div class="buttons">
-                            <div class="right">
-                                <a id="button-review" class="button">Continue</a></div>
-                        </div>
-                    </div>
-                    <script>
-                        $(document).ready(function () {
-                            $('#tabs a').tabs();
-                        });
-                    </script>
-                    <!-- Description and Reviews Tab Start -->
-                    <!--Related Product Start-->
-                    <nopCommerce:RelatedProducts ID="ctrlRelatedProducts" runat="server" />
-                    
-                    <script type="text/javascript">
-                        (function () {
-                            // store the slider in a local variable
-                            var $window = $(window),
-      flexslider;
-                            // tiny helper function to add breakpoints
-                            function getGridSize() {
-                                return (window.innerWidth < 320) ? 1 :
-		   (window.innerWidth < 600) ? 2 :
-		   (window.innerWidth < 800) ? 3 :
-           (window.innerWidth < 900) ? 3 : 4;
-                            }
-                            $window.load(function () {
-                                $('#content #related_pro').flexslider({
-                                    animation: "slide",
-                                    animationLoop: false,
-                                    slideshow: false,
-                                    itemWidth: 210,
-                                    minItems: getGridSize(), // use function to pull in initial value
-                                    maxItems: getGridSize() // use function to pull in initial value
-                                });
-                            });
-                        } ());
-                    </script>
-                    <!--Related Product End-->
-                </div>
+                    </ItemTemplate>
+                </asp:ListView>
+
+            </div>
+        <div class="right">
+            <div class="description">
+                <span>Description: </span>
+                <asp:Literal ID="lShortDescription" runat="server" />
+            </div>
+            <div class="price">
+                <nopCommerce:ProductPrice1 ID="ctrlProductPrice" runat="server" />
+            </div>
+            
+            
+            
+            <!-- AddThis Button BEGIN -->
+            <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-506f325f57fbfc95"></script>
+            <!-- AddThis Button END -->
+        </div>
+    </div>
+    <!-- Description and Reviews Tab Start -->
+    <div id="tabs" class="htabs">
+        <a href="#tab-description">Description</a> <a href="#tab-review">Reviews (0)</a>
+    </div>
+    <div id="tab-description" class="tab-content">
+        <asp:Literal ID="lFullDescription" runat="server" />
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            $('#tabs a').tabs();
+        });
+    </script>
+    <!-- Description and Reviews Tab Start -->
+    <!--Related Product Start-->
+    <nopCommerce:RelatedProducts ID="ctrlRelatedProducts" runat="server" />
+
+    <script type="text/javascript">
+        (function () {
+            // store the slider in a local variable
+            var $window = $(window),
+flexslider;
+            // tiny helper function to add breakpoints
+            function getGridSize() {
+                return (window.innerWidth < 320) ? 1 :
+(window.innerWidth < 600) ? 2 :
+(window.innerWidth < 800) ? 3 :
+(window.innerWidth < 900) ? 3 : 4;
+            }
+            $window.load(function () {
+                $('#content #related_pro').flexslider({
+                    animation: "slide",
+                    animationLoop: false,
+                    slideshow: false,
+                    itemWidth: 210,
+                    minItems: getGridSize(), // use function to pull in initial value
+                    maxItems: getGridSize() // use function to pull in initial value
+                });
+            });
+        }());
+    </script>
+    <!--Related Product End-->
+</div>
 <!--Middle Part End-->
-<div class="product-details-page" style="display:none;">
+<div class="product-details-page" style="display: none;">
     <div class="product-essential product-details-info">
 
         <script language="javascript" type="text/javascript">
@@ -187,30 +123,27 @@
         </script>
 
         <div class="picture">
-            
-            
         </div>
         <div class="overview">
-            <h1 class="productname">
-                
-            </h1>
+            <h1 class="productname"></h1>
             <div class="clear">
             </div>
             <div class="shortdescription">
-                
             </div>
             <asp:PlaceHolder runat="server" ID="phSKU">
                 <div class="clear">
                 </div>
                 <div class="sku">
-                    <%=GetLocaleResourceString("Products.SKU")%> <asp:Literal runat="server" ID="lSKU" />
+                    <%=GetLocaleResourceString("Products.SKU")%>
+                    <asp:Literal runat="server" ID="lSKU" />
                 </div>
             </asp:PlaceHolder>
             <asp:PlaceHolder runat="server" ID="phManufacturerPartNumber">
                 <div class="clear">
                 </div>
                 <div class="manufacturerpartnumber">
-                    <%=GetLocaleResourceString("Products.ManufacturerPartNumber")%> <asp:Literal runat="server" ID="lManufacturerPartNumber" />
+                    <%=GetLocaleResourceString("Products.ManufacturerPartNumber")%>
+                    <asp:Literal runat="server" ID="lManufacturerPartNumber" />
                 </div>
             </asp:PlaceHolder>
             <div class="clear">
@@ -230,13 +163,13 @@
             </asp:PlaceHolder>
             <div class="clear">
             </div>
-        <div class="clear">
-        </div>
+            <div class="clear">
+            </div>
             <div class="product-collateral">
                 <nopCommerce:ProductRating ID="ctrlProductRating" runat="server" />
                 <br />
                 <div class="one-variant-price">
-                    
+
                     <nopCommerce:DecimalTextBox runat="server" ID="txtCustomerEnteredPrice" Value="1"
                         RequiredErrorMessage="<% $NopResources:Products.CustomerEnteredPrice.EnterPrice %>"
                         MinimumValue="0" MaximumValue="100000000" Width="100" />
@@ -287,7 +220,6 @@
             <div class="clear">
             </div>
             <div class="fulldescription">
-                
             </div>
         </div>
         <div class="clear">
@@ -298,7 +230,6 @@
         <div class="clear">
         </div>
         <div>
-            
         </div>
         <div class="clear">
         </div>
