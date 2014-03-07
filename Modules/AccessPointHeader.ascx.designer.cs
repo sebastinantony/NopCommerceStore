@@ -13,6 +13,15 @@ namespace NopSolutions.NopCommerce.Web.Modules {
     public partial class AccessPointHeader {
         
         /// <summary>
+        /// SearchBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::NopSolutions.NopCommerce.Web.Modules.SearchBoxControl SearchBox1;
+        
+        /// <summary>
         /// ctrlCategoryNavigation control.
         /// </summary>
         /// <remarks>
