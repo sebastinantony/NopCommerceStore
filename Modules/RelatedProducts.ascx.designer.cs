@@ -13,12 +13,12 @@ namespace NopSolutions.NopCommerce.Web.Modules {
     public partial class RelatedProductsControl {
         
         /// <summary>
-        /// dlRelatedProducts control.
+        /// rptrRelatedProducts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlRelatedProducts;
+        protected global::System.Web.UI.WebControls.Repeater rptrRelatedProducts;
     }
 }

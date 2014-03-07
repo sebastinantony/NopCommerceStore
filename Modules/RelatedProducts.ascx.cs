@@ -57,8 +57,8 @@ namespace NopSolutions.NopCommerce.Web.Modules
                 if (products.Count > 0)
                 {
                     this.Visible = true;
-                    dlRelatedProducts.DataSource = products;
-                    dlRelatedProducts.DataBind();
+                    rptrRelatedProducts.DataSource = products;
+                    rptrRelatedProducts.DataBind();
                 }
                 else
                 {
@@ -72,7 +72,15 @@ namespace NopSolutions.NopCommerce.Web.Modules
             }
         }
 
-        protected void dlRelatedProducts_ItemDataBound(object sender, DataListItemEventArgs e)
+        public int ProductId
+        {
+            get
+            {
+                return CommonHelper.QueryStringInt("ProductId");
+            }
+        }
+
+        protected void rptrRelatedProducts_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
@@ -107,14 +115,7 @@ namespace NopSolutions.NopCommerce.Web.Modules
                     }
                 }
             }
-        }
 
-        public int ProductId
-        {
-            get
-            {
-                return CommonHelper.QueryStringInt("ProductId");
-            }
         }
     }
 }

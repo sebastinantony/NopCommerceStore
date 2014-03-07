@@ -5,11 +5,12 @@
         <%=GetLocaleResourceString("Products.RelatedProducts")%></div>
     <div class="box-content">
         <div class="box-product">
-            <div class="flexslider"  >
+            <div class="flexslider" id="related_pro">
                 <ul class="slides">
-                    <asp:DataList ID="dlRelatedProducts" runat="server" OnItemDataBound="dlRelatedProducts_ItemDataBound">
+                    
+                    <asp:Repeater ID="rptrRelatedProducts" runat="server" OnItemDataBound="rptrRelatedProducts_ItemDataBound">
                         <ItemTemplate>
-                            <li>
+                              <li>
                                 <div class="slide-inner">
                                     <div class="image">
                                         <asp:HyperLink ID="hlImageLink" runat="server" /></div>
@@ -26,10 +27,13 @@
                                 </div>
                             </li>
                         </ItemTemplate>
-                    </asp:DataList>
+                    </asp:Repeater>
+
+
                 </ul>
             </div>
         </div>
     </div>
 </div>
+
 
