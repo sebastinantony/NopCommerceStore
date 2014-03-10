@@ -58,22 +58,7 @@ namespace NopSolutions.NopCommerce.Web.Modules
         }
 
 
-        protected void lvRecentlyViewedProducts_ItemDataBound(object sender, ListViewItemEventArgs e)
-        {
-            if (e.Item.ItemType == ListViewItemType.DataItem)
-            {
-                var dataItem = e.Item as ListViewDataItem;
-                if (dataItem != null)
-                {
-                    var product = dataItem.DataItem as Product;
-                    if (product != null)
-                    {
-                        var hlProduct = dataItem.FindControl("hlProduct") as HyperLink;
-                        hlProduct.NavigateUrl = SEOHelper.GetProductUrl(product);
-                    }
-                }
-            }
-        }
+        
 
     }
 }

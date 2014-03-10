@@ -16,6 +16,9 @@
     <div id="container">
         <!--Left Part-->
         <div id="column-left">
+            <!--Bestsellers Part Start-->
+                <nopCommerce:RecentlyViewedProducts ID="ctrlRecentlyViewedProducts" runat="server" />            
+            <!--Bestsellers Part End-->
             <!--Latest Product Start-->
             <uc1:RecentlyAddedLeftNav ID="RecentlyAddedLeftNav1" runat="server" />
             <!--Latest Product End-->

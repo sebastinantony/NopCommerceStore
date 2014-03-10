@@ -1,28 +1,20 @@
 <%@ Control Language="C#" AutoEventWireup="true"
-    Inherits="NopSolutions.NopCommerce.Web.Modules.RecentlyViewedProductsBoxControl" Codebehind="RecentlyViewedProductsBox.ascx.cs" %>
-<div class="block block-recently-viewed-products">
-    <div class="title">
-        <%=GetLocaleResourceString("Products.RecentlyViewedProducts")%>
-    </div>
-    <div class="clear">
-    </div>
-    <div class="listbox">
-        <asp:ListView ID="lvRecentlyViewedProducts" runat="server" OnItemDataBound="lvRecentlyViewedProducts_ItemDataBound" EnableViewState="false">
-            <LayoutTemplate>
-                <ul>
-                    <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
+    Inherits="NopSolutions.NopCommerce.Web.Modules.RecentlyViewedProductsBoxControl" CodeBehind="RecentlyViewedProductsBox.ascx.cs" %>
+<%@ Register Src="ProductBox_Latest.ascx" TagName="ProductBox_Latest" TagPrefix="uc1" %>
+
+<div class="box">
+    <div class="box-heading"><%=GetLocaleResourceString("Products.RecentlyViewedProducts")%></div>
+    <div class="box-content">
+        <div class="box-product">
+            <div class="flexslider">
+                <ul class="slides">
+                    <asp:ListView ID="lvRecentlyViewedProducts" runat="server" EnableViewState="false">
+                        <ItemTemplate>
+                            <uc1:ProductBox_Latest ID="ProductBox_Latest1" runat="server" Product='<%# Container.DataItem %>' />
+                        </ItemTemplate>
+                    </asp:ListView>
                 </ul>
-            </LayoutTemplate>
-            <ItemTemplate>
-                <li>
-                    <asp:HyperLink ID="hlProduct" runat="server" Text='<%#Server.HtmlEncode(Eval("LocalizedName").ToString()) %>' />
-                </li>
-            </ItemTemplate>
-            <ItemSeparatorTemplate>
-                <li class="separator">
-                    &nbsp;
-                </li>
-            </ItemSeparatorTemplate>
-        </asp:ListView>
+            </div>
+        </div>
     </div>
 </div>
