@@ -87,6 +87,7 @@ namespace NopSolutions.NopCommerce.Web.Templates.Categories
             {
                 dlSubCategories.DataSource = subCategories;
                 dlSubCategories.DataBind();
+                dlSubCategories.Visible = true;
             }
             else
                 dlSubCategories.Visible = false;
@@ -201,6 +202,14 @@ namespace NopSolutions.NopCommerce.Web.Templates.Categories
             {
                 var category = e.Item.DataItem as Category;
                 string categoryURL = SEOHelper.GetCategoryUrl(category);
+
+                var hlDetails = e.Item.FindControl("hlDetails") as HyperLink;
+                if(hlDetails != null)
+                    hlDetails.NavigateUrl = categoryURL;
+
+                var lShortDescription = e.Item.FindControl("lShortDescription") as Literal;
+                if (lShortDescription != null)
+                    lShortDescription.Text = category.LocalizedDescription;
 
                 var hlImageLink = e.Item.FindControl("hlImageLink") as HyperLink;
                 if (hlImageLink != null)
