@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" Inherits="NopSolutions.NopCommerce.Web.Modules.SearchControl"
     CodeBehind="Search.ascx.cs" %>
-<%@ Register TagPrefix="nopCommerce" TagName="ProductBox2" Src="~/Modules/ProductBox2.ascx" %>
+<%@ Register TagPrefix="nopCommerce" TagName="ProductBox2" Src="~/Modules/ProductBox1.ascx" %>
 <%@ Register TagPrefix="nopCommerce" TagName="NumericTextBox" Src="~/Modules/NumericTextBox.ascx" %>
 
 <script type="text/javascript">
@@ -19,15 +19,9 @@
 
 </script>
 
-<div class="search-panel">
-    <div class="page-title">
-        <h1>
-            <%=GetLocaleResourceString("Search.Search")%></h1>
-    </div>
-    <div class="clear">
-    </div>
-    <div class="search-input">
-        <table class="basic-search">
+<div id="content">
+    <h1><%=GetLocaleResourceString("Search.Search")%></h1>
+    <table class="basic-search">
             <tbody>
                 <tr>
                     <td class="title">
@@ -51,7 +45,7 @@
                                         <%=GetLocaleResourceString("Search.Categories")%>
                                     </td>
                                     <td class="data">
-                                        <asp:DropDownList runat="server" ID="ddlCategories" style="width: 200px;">
+                                        <asp:DropDownList runat="server" ID="ddlCategories" Style="width: 200px;">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -60,7 +54,7 @@
                                         <%=GetLocaleResourceString("Search.Manufacturers")%>
                                     </td>
                                     <td class="data">
-                                        <asp:DropDownList ID="ddlManufacturers" runat="server" style="width: 200px;">
+                                        <asp:DropDownList ID="ddlManufacturers" runat="server" Style="width: 200px;">
                                         </asp:DropDownList>
                                     </td>
                                 </tr>
@@ -85,7 +79,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td  colspan="2" align="right">
+                    <td colspan="2" align="right">
                         <asp:Button runat="server" ID="btnSearch" OnClick="btnSearch_Click" Text="<% $NopResources:Search.SearchButton %>"
                             CssClass="searchbutton" />
                     </td>
@@ -99,33 +93,35 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-    <div class="clear">
-    </div>
-    <div class="search-results">
+    <!--Product List Start-->
+    <div class="product-list">
+
+        <%--*********************--%>
         <asp:Label runat="server" ID="lblNoResults" Text="<% $NopResources:Search.NoResultsText %>"
             Visible="false" CssClass="result" />
-        <div class="product-list1">
-            <asp:ListView ID="lvProducts" runat="server" OnPagePropertiesChanging="lvProducts_OnPagePropertiesChanging">
-                <LayoutTemplate>
-                    <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
-                </LayoutTemplate>
-                <ItemTemplate>
-                    <div class="item-box">
-                        <nopCommerce:ProductBox2 ID="ctrlProductBox" Product='<%# Container.DataItem %>'
-                            runat="server" />
-                    </div>
-                </ItemTemplate>
-            </asp:ListView>
-        </div>
-        <div class="pager">
-            <asp:DataPager ID="pagerProducts" runat="server" PagedControlID="lvProducts" PageSize="10">
-                <Fields>
-                    <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True"
-                        FirstPageText="<% $NopResources:Search.First %>" LastPageText="<% $NopResources:Search.Last %>"
-                        NextPageText="<% $NopResources:Search.Next %>" PreviousPageText="<% $NopResources:Search.Previous %>" />
-                </Fields>
-            </asp:DataPager>
-        </div>
+        <asp:ListView ID="lvProducts" runat="server" OnPagePropertiesChanging="lvProducts_OnPagePropertiesChanging">
+            <LayoutTemplate>
+                <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
+            </LayoutTemplate>
+            <ItemTemplate>
+                <nopCommerce:ProductBox2 ID="ctrlProductBox" Product='<%# Container.DataItem %>'
+                    runat="server" />
+            </ItemTemplate>
+        </asp:ListView>
+
+        <%--*************************--%>
     </div>
+    <!--Product List End-->
+    <!--Pagination Part Start-->
+    <div class="pagination">
+        <asp:DataPager ID="pagerProducts" runat="server" PagedControlID="lvProducts" PageSize="10">
+            <Fields>
+                <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True"
+                    FirstPageText="<% $NopResources:Search.First %>" LastPageText="<% $NopResources:Search.Last %>"
+                    NextPageText="<% $NopResources:Search.Next %>" PreviousPageText="<% $NopResources:Search.Previous %>" ButtonCssClass="links" />
+            </Fields>
+        </asp:DataPager>
+    </div>
+    <!--Pagination Part End-->
 </div>
+
