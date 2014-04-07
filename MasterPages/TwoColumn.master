@@ -9,26 +9,22 @@
 <%@ Register TagPrefix="nopCommerce" TagName="RecentlyViewedProducts" Src="~/Modules/RecentlyViewedProductsBox.ascx" %>
 <%@ Register TagPrefix="nopCommerce" TagName="PopularTags" Src="~/Modules/PopularTags.ascx" %>
 <%@ Register TagPrefix="nopCommerce" TagName="NewsLetterSubscriptionBoxControl" Src="~/Modules/NewsLetterSubscriptionBoxControl.ascx" %>
-<%@ Register Src="~/Modules/RecentlyAddedLeftNav.ascx" TagName="RecentlyAddedLeftNav"
-    TagPrefix="uc1" %>
+<%@ Register Src="~/Modules/RecentlyAddedLeftNav.ascx" TagName="RecentlyAddedLeftNav" TagPrefix="uc1" %>
+<%@ Register Src="../Modules/APCategoryNavigation.ascx" TagName="APCategoryNavigation" TagPrefix="uc2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph1" runat="server">
     <!--Header Part End-->
     <div id="container">
         <!--Left Part-->
         <div id="column-left">
+            <%--Category Starts--%>
+            <uc2:APCategoryNavigation ID="APCategoryNavigation1" runat="server" />
+            <%--Category Ends--%>
             <!--Bestsellers Part Start-->
-                <nopCommerce:RecentlyViewedProducts ID="ctrlRecentlyViewedProducts" runat="server" />            
+            <nopCommerce:RecentlyViewedProducts ID="ctrlRecentlyViewedProducts" runat="server" />
             <!--Bestsellers Part End-->
             <!--Latest Product Start-->
             <uc1:RecentlyAddedLeftNav ID="RecentlyAddedLeftNav1" runat="server" />
             <!--Latest Product End-->
-            <!--Banner Start-->
-            <div class="banner">
-                <div>
-                    <a href="#">
-                        <img src="../image/product/small-banner1-220x350.jpg" alt="banner" title="banner" /></a></div>
-            </div>
-            <!--Banner End-->
         </div>
         <!--Left End-->
         <!--Middle Part Start-->
